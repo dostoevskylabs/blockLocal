@@ -7,3 +7,4 @@ Currently, it only blocks fetch (and probably not in every situation).
 - Block XMLHttpRequest
 - Block WebSocket requests
 - Add full local IP range to the blacklist
+- Ensure it always runs before website's javascript
