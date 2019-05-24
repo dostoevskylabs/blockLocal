@@ -1,5 +1,5 @@
-let script 	= document.createElement( "script" );
-let code 	= document.createTextNode( `(function(){
+let blockLocal_Script	= document.createElement( "script" );
+let blockLocal_Code = document.createTextNode( `(function(){
 let evil = ['localhost', '127.0.0.1'];
   let defaultFetch = fetch;
   fetch = function( ... params ) {
@@ -12,5 +12,5 @@ let evil = ['localhost', '127.0.0.1'];
      return defaultFetch(params);
   }
 })();` );
-script.appendChild( code );
-(document.body || document.head || document.documentElement).appendChild( script );
+blockLocal_Script.appendChild( blockLocal_Code );
+(document.head || document.body || document.documentElement).appendChild( blockLocal_Script );
